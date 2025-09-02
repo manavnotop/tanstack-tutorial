@@ -16,7 +16,7 @@ async function getPosts(): Promise<PostBody []>{
 
 export default function Test(){
 
-  const query = useQuery({ queryKey: ['posts'], queryFn: getPosts})
+  const query = useQuery({ queryKey: ['posts'], queryFn: getPosts, staleTime: 10000})
 
   return (
     <div className="flex items-center justify-center h-screen flex-col">
